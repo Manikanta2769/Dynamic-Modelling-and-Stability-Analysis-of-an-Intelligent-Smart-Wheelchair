@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<!-- Realistic visuals added; collision shapes, masses, inertias, joints and names are unchanged. -->
+<robot name="wheelchair_3d">
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0.230" rpy="0 0 0"/>
+      <mass value="93.58"/>
+      <inertia ixx="18.0" ixy="0.0" ixz="0.0" iyy="22.0" iyz="0.0" izz="25.0"/>
+    </inertial>
+    <visual><origin xyz="0.0600 0.2450 0.1600" rpy="0.0000 1.5708 0.0000"/><geometry><cylinder radius="0.0140" length="0.6800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2800 0.2450 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0140" length="0.5800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3500 0.2450 0.7400" rpy="0.0000 1.5708 3.1416"/><geometry><cylinder radius="0.0170" length="0.1400"/></geometry><material name="black"><color rgba="0.0700 0.0700 0.0700 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3150 0.2450 0.0800" rpy="0.0000 2.7292 3.1416"/><geometry><cylinder radius="0.0160" length="0.1746"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="0.4000 0.2850 0.1600" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0140" length="0.0800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="0.4500 0.2175 -0.0100" rpy="0.0000 2.8177 -0.5028"/><geometry><cylinder radius="0.0140" length="0.3586"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.4300 0.2225 -0.0500" rpy="0.0000 2.4202 -2.9702"/><geometry><cylinder radius="0.0110" length="0.3995"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.5600 0.2000 -0.2000" rpy="1.5708 0.0000 0.0000"/><geometry><cylinder radius="0.0500" length="0.0260"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.6000 0.1200 -0.1900" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2600 0.1400 0.0120"/></geometry><material name="pad"><color rgba="0.1200 0.1200 0.1400 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0700 0.2550 0.4000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.4400 0.0550 0.0250"/></geometry><material name="pad"><color rgba="0.1200 0.1200 0.1400 1.0000"/></material></visual>
+    <visual><origin xyz="0.1000 0.2500 0.2750" rpy="0.0000 0.0435 1.5708"/><geometry><cylinder radius="0.0120" length="0.2302"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2800 0.2500 0.4000" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0120" length="0.0100"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3500 0.2650 0.0000" rpy="1.5708 0.0000 0.0000"/><geometry><cylinder radius="0.0700" length="0.0700"/></geometry><material name="motor"><color rgba="0.3500 0.3700 0.4000 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0800 0.0950 0.2850" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0650"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1100 0.0950 0.2850" rpy="0.0000 1.5708 0.0000"/><geometry><cylinder radius="0.0650" length="0.3800"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.3000 0.0950 0.2850" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0650"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.4200 0.0950 0.0875" rpy="0.0000 2.5956 0.0000"/><geometry><cylinder radius="0.0550" length="0.4622"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.6000 0.0950 -0.1490" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2600 0.1000 0.0700"/></geometry><material name="shoe"><color rgba="0.1000 0.0900 0.0900 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1000 0.2000 0.7400" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0600"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1250 0.2225 0.5950" rpy="0.0000 2.9137 2.4088"/><geometry><cylinder radius="0.0400" length="0.2977"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1500 0.2450 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0400"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0600 -0.2450 0.1600" rpy="0.0000 1.5708 0.0000"/><geometry><cylinder radius="0.0140" length="0.6800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2800 -0.2450 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0140" length="0.5800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3500 -0.2450 0.7400" rpy="0.0000 1.5708 3.1416"/><geometry><cylinder radius="0.0170" length="0.1400"/></geometry><material name="black"><color rgba="0.0700 0.0700 0.0700 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3150 -0.2450 0.0800" rpy="0.0000 2.7292 3.1416"/><geometry><cylinder radius="0.0160" length="0.1746"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="0.4000 -0.2850 0.1600" rpy="0.0000 1.5708 -1.5708"/><geometry><cylinder radius="0.0140" length="0.0800"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="0.4500 -0.2175 -0.0100" rpy="0.0000 2.8177 0.5028"/><geometry><cylinder radius="0.0140" length="0.3586"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.4300 -0.2225 -0.0500" rpy="0.0000 2.4202 2.9702"/><geometry><cylinder radius="0.0110" length="0.3995"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.5600 -0.2000 -0.2000" rpy="1.5708 0.0000 0.0000"/><geometry><cylinder radius="0.0500" length="0.0260"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.6000 -0.1200 -0.1900" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2600 0.1400 0.0120"/></geometry><material name="pad"><color rgba="0.1200 0.1200 0.1400 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0700 -0.2550 0.4000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.4400 0.0550 0.0250"/></geometry><material name="pad"><color rgba="0.1200 0.1200 0.1400 1.0000"/></material></visual>
+    <visual><origin xyz="0.1000 -0.2500 0.2750" rpy="0.0000 0.0435 -1.5708"/><geometry><cylinder radius="0.0120" length="0.2302"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2800 -0.2500 0.4000" rpy="0.0000 1.5708 -1.5708"/><geometry><cylinder radius="0.0120" length="0.0100"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3500 -0.2650 0.0000" rpy="1.5708 0.0000 0.0000"/><geometry><cylinder radius="0.0700" length="0.0700"/></geometry><material name="motor"><color rgba="0.3500 0.3700 0.4000 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0800 -0.0950 0.2850" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0650"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1100 -0.0950 0.2850" rpy="0.0000 1.5708 0.0000"/><geometry><cylinder radius="0.0650" length="0.3800"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.3000 -0.0950 0.2850" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0650"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.4200 -0.0950 0.0875" rpy="0.0000 2.5956 0.0000"/><geometry><cylinder radius="0.0550" length="0.4622"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="0.6000 -0.0950 -0.1490" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2600 0.1000 0.0700"/></geometry><material name="shoe"><color rgba="0.1000 0.0900 0.0900 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1000 -0.2000 0.7400" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0600"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1250 -0.2225 0.5950" rpy="0.0000 2.9137 -2.4088"/><geometry><cylinder radius="0.0400" length="0.2977"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1500 -0.2450 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0400"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.3500 0.0000 0.0000" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0160" length="0.5500"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1500 0.0000 0.1600" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0120" length="0.4900"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="0.3000 0.0000 0.1600" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0120" length="0.4900"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2800 0.0000 0.6000" rpy="0.0000 1.5708 1.5708"/><geometry><cylinder radius="0.0120" length="0.4900"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0500 0.0000 0.0750" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.3000 0.2600 0.1300"/></geometry><material name="battery"><color rgba="0.1500 0.1600 0.1800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1500 0.0000 0.0900" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.1000 0.1200 0.0500"/></geometry><material name="graybase"><color rgba="0.2500 0.2600 0.2800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1900 -0.2550 0.4000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.1000 0.0700 0.0300"/></geometry><material name="graybase"><color rgba="0.2500 0.2600 0.2800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1900 -0.2550 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0090" length="0.0700"/></geometry><material name="black"><color rgba="0.0700 0.0700 0.0700 1.0000"/></material></visual>
+    <visual><origin xyz="0.1900 -0.2550 0.4900" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0220"/></geometry><material name="red"><color rgba="0.8500 0.1000 0.1000 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0150 -0.2500 0.4600" rpy="0.0000 1.4969 -0.0370"/><geometry><cylinder radius="0.0350" length="0.2709"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1800 -0.2550 0.5000" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0450"/></geometry><material name="skin"><color rgba="0.8700 0.6900 0.5500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0250 0.2500 0.4500" rpy="0.0000 1.5708 0.0400"/><geometry><cylinder radius="0.0350" length="0.2502"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1500 0.2550 0.4500" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.0450"/></geometry><material name="skin"><color rgba="0.8700 0.6900 0.5500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0900 0.0000 0.2850" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2200 0.3200 0.1200"/></geometry><material name="pants"><color rgba="0.1800 0.2200 0.3500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1000 0.0000 0.5650" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.2000 0.3200 0.4400"/></geometry><material name="shirt"><color rgba="0.2000 0.5000 0.4500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0900 0.0000 0.8200" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0500" length="0.0700"/></geometry><material name="skin"><color rgba="0.8700 0.6900 0.5500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0700 0.0000 0.9300" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.1050"/></geometry><material name="skin"><color rgba="0.8700 0.6900 0.5500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0950 0.0000 0.9450" rpy="0.0000 0.0000 0.0000"/><geometry><sphere radius="0.1080"/></geometry><material name="hair"><color rgba="0.1200 0.0800 0.0600 1.0000"/></material></visual>
+  </link>
+
+  <link name="seat">
+    <inertial><mass value="1.0"/><inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/></inertial>
+    <visual><origin xyz="0.0000 0.0000 0.0075" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.5000 0.4500 0.0350"/></geometry><material name="blue"><color rgba="0.1000 0.2000 0.6000 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 -0.0185" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.4800 0.4300 0.0120"/></geometry><material name="graybase"><color rgba="0.2500 0.2600 0.2800 1.0000"/></material></visual>
+    <collision><geometry><box size="0.50 0.45 0.05"/></geometry></collision>
+  </link>
+  <joint name="seat_joint" type="fixed">
+    <parent link="base_link"/><child link="seat"/><origin xyz="0 0 0.20" rpy="0 0 0"/>
+  </joint>
+
+  <link name="backrest">
+    <inertial><mass value="1.0"/><inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/></inertial>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0500 0.4500 0.5000"/></geometry><material name="blue"><color rgba="0.1000 0.2000 0.6000 1.0000"/></material></visual>
+    <collision><geometry><box size="0.05 0.45 0.50"/></geometry></collision>
+  </link>
+  <joint name="backrest_joint" type="fixed">
+    <parent link="seat"/><child link="backrest"/><origin xyz="-0.225 0 0.25" rpy="0 0 0"/>
+  </joint>
+
+  <link name="left_wheel">
+    <visual><origin xyz="0.2825 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2801 0.0369 0.0000" rpy="0.0000 0.0000 0.1309"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2729 0.0731 0.0000" rpy="0.0000 0.0000 0.2618"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2610 0.1081 0.0000" rpy="0.0000 0.0000 0.3927"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2447 0.1412 0.0000" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2241 0.1720 0.0000" rpy="0.0000 0.0000 0.6545"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1998 0.1998 0.0000" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1720 0.2241 0.0000" rpy="0.0000 0.0000 0.9163"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1413 0.2447 0.0000" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1081 0.2610 0.0000" rpy="0.0000 0.0000 1.1781"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0731 0.2729 0.0000" rpy="0.0000 0.0000 1.3090"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0369 0.2801 0.0000" rpy="0.0000 0.0000 1.4399"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2825 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0369 0.2801 0.0000" rpy="0.0000 0.0000 1.7017"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0731 0.2729 0.0000" rpy="0.0000 0.0000 1.8326"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1081 0.2610 0.0000" rpy="0.0000 0.0000 1.9635"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1412 0.2447 0.0000" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1720 0.2241 0.0000" rpy="0.0000 0.0000 2.2253"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1998 0.1998 0.0000" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2241 0.1720 0.0000" rpy="0.0000 0.0000 2.4871"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2447 0.1412 0.0000" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2610 0.1081 0.0000" rpy="0.0000 0.0000 2.7489"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2729 0.0731 0.0000" rpy="0.0000 0.0000 2.8798"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2801 0.0369 0.0000" rpy="0.0000 0.0000 3.0107"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2825 0.0000 0.0000" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2801 -0.0369 0.0000" rpy="0.0000 0.0000 3.2725"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2729 -0.0731 0.0000" rpy="0.0000 0.0000 3.4034"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2610 -0.1081 0.0000" rpy="0.0000 0.0000 3.5343"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2447 -0.1412 0.0000" rpy="0.0000 0.0000 3.6652"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2241 -0.1720 0.0000" rpy="0.0000 0.0000 3.7961"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1998 -0.1998 0.0000" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1720 -0.2241 0.0000" rpy="0.0000 0.0000 4.0579"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1413 -0.2447 0.0000" rpy="0.0000 0.0000 4.1888"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1081 -0.2610 0.0000" rpy="0.0000 0.0000 4.3197"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0731 -0.2729 0.0000" rpy="0.0000 0.0000 4.4506"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0369 -0.2801 0.0000" rpy="0.0000 0.0000 4.5815"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2825 0.0000" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0369 -0.2801 0.0000" rpy="0.0000 0.0000 4.8433"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0731 -0.2729 0.0000" rpy="0.0000 0.0000 4.9742"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1081 -0.2610 0.0000" rpy="0.0000 0.0000 5.1051"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1413 -0.2447 0.0000" rpy="0.0000 0.0000 5.2360"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1720 -0.2241 0.0000" rpy="0.0000 0.0000 5.3669"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1998 -0.1998 0.0000" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2241 -0.1720 0.0000" rpy="0.0000 0.0000 5.6287"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2447 -0.1413 0.0000" rpy="0.0000 0.0000 5.7596"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2610 -0.1081 0.0000" rpy="0.0000 0.0000 5.8905"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2729 -0.0731 0.0000" rpy="0.0000 0.0000 6.0214"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2801 -0.0369 0.0000" rpy="0.0000 0.0000 6.1523"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2525 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2476 0.0493 0.0000" rpy="0.0000 0.0000 0.1963"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2333 0.0966 0.0000" rpy="0.0000 0.0000 0.3927"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2099 0.1403 0.0000" rpy="0.0000 0.0000 0.5890"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1785 0.1785 0.0000" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1403 0.2099 0.0000" rpy="0.0000 0.0000 0.9817"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0966 0.2333 0.0000" rpy="0.0000 0.0000 1.1781"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0493 0.2476 0.0000" rpy="0.0000 0.0000 1.3744"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2525 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0493 0.2476 0.0000" rpy="0.0000 0.0000 1.7671"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0966 0.2333 0.0000" rpy="0.0000 0.0000 1.9635"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1403 0.2099 0.0000" rpy="0.0000 0.0000 2.1598"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1785 0.1785 0.0000" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2099 0.1403 0.0000" rpy="0.0000 0.0000 2.5525"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2333 0.0966 0.0000" rpy="0.0000 0.0000 2.7489"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2476 0.0493 0.0000" rpy="0.0000 0.0000 2.9452"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2525 0.0000 0.0000" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2476 -0.0493 0.0000" rpy="0.0000 0.0000 3.3379"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2333 -0.0966 0.0000" rpy="0.0000 0.0000 3.5343"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2099 -0.1403 0.0000" rpy="0.0000 0.0000 3.7306"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1785 -0.1785 0.0000" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1403 -0.2099 0.0000" rpy="0.0000 0.0000 4.1233"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0966 -0.2333 0.0000" rpy="0.0000 0.0000 4.3197"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0493 -0.2476 0.0000" rpy="0.0000 0.0000 4.5160"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2525 0.0000" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0493 -0.2476 0.0000" rpy="0.0000 0.0000 4.9087"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0966 -0.2333 0.0000" rpy="0.0000 0.0000 5.1051"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1403 -0.2099 0.0000" rpy="0.0000 0.0000 5.3014"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1785 -0.1785 0.0000" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2099 -0.1403 0.0000" rpy="0.0000 0.0000 5.6941"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2333 -0.0966 0.0000" rpy="0.0000 0.0000 5.8905"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2476 -0.0493 0.0000" rpy="0.0000 0.0000 6.0868"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0450" length="0.0750"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2400 0.0000 -0.0450" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2318 0.0621 -0.0450" rpy="0.0000 0.0000 0.2618"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2078 0.1200 -0.0450" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1697 0.1697 -0.0450" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1200 0.2078 -0.0450" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0621 0.2318 -0.0450" rpy="0.0000 0.0000 1.3090"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2400 -0.0450" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0621 0.2318 -0.0450" rpy="0.0000 0.0000 1.8326"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1200 0.2078 -0.0450" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1697 0.1697 -0.0450" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2078 0.1200 -0.0450" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2318 0.0621 -0.0450" rpy="0.0000 0.0000 2.8798"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2400 0.0000 -0.0450" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2318 -0.0621 -0.0450" rpy="0.0000 0.0000 3.4034"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2078 -0.1200 -0.0450" rpy="0.0000 0.0000 3.6652"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1697 -0.1697 -0.0450" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1200 -0.2078 -0.0450" rpy="0.0000 0.0000 4.1888"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0621 -0.2318 -0.0450" rpy="0.0000 0.0000 4.4506"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2400 -0.0450" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0621 -0.2318 -0.0450" rpy="0.0000 0.0000 4.9742"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1200 -0.2078 -0.0450" rpy="0.0000 0.0000 5.2360"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1697 -0.1697 -0.0450" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2078 -0.1200 -0.0450" rpy="0.0000 0.0000 5.7596"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2318 -0.0621 -0.0450" rpy="0.0000 0.0000 6.0214"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1739 0.1739 -0.0225" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1739 0.1739 -0.0225" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1739 -0.1739 -0.0225" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1739 -0.1739 -0.0225" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2000 0.0000 -0.0260" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0300 0.0120"/></geometry><material name="accent"><color rgba="0.9500 0.4500 0.1000 1.0000"/></material></visual>
+    <collision><geometry><cylinder radius="0.30" length="0.05"/></geometry></collision>
+    <inertial><mass value="2.5"/><inertia ixx="0.06" ixy="0" ixz="0" iyy="0.06" iyz="0" izz="0.06"/></inertial>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="left_wheel"/>
+    <origin xyz="-0.35 0.325 0" rpy="1.5708 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <link name="right_wheel">
+    <visual><origin xyz="0.2825 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2801 0.0369 0.0000" rpy="0.0000 0.0000 0.1309"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2729 0.0731 0.0000" rpy="0.0000 0.0000 0.2618"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2610 0.1081 0.0000" rpy="0.0000 0.0000 0.3927"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2447 0.1412 0.0000" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2241 0.1720 0.0000" rpy="0.0000 0.0000 0.6545"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1998 0.1998 0.0000" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1720 0.2241 0.0000" rpy="0.0000 0.0000 0.9163"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1413 0.2447 0.0000" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1081 0.2610 0.0000" rpy="0.0000 0.0000 1.1781"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0731 0.2729 0.0000" rpy="0.0000 0.0000 1.3090"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0369 0.2801 0.0000" rpy="0.0000 0.0000 1.4399"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2825 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0369 0.2801 0.0000" rpy="0.0000 0.0000 1.7017"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0731 0.2729 0.0000" rpy="0.0000 0.0000 1.8326"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1081 0.2610 0.0000" rpy="0.0000 0.0000 1.9635"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1412 0.2447 0.0000" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1720 0.2241 0.0000" rpy="0.0000 0.0000 2.2253"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1998 0.1998 0.0000" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2241 0.1720 0.0000" rpy="0.0000 0.0000 2.4871"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2447 0.1412 0.0000" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2610 0.1081 0.0000" rpy="0.0000 0.0000 2.7489"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2729 0.0731 0.0000" rpy="0.0000 0.0000 2.8798"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2801 0.0369 0.0000" rpy="0.0000 0.0000 3.0107"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2825 0.0000 0.0000" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2801 -0.0369 0.0000" rpy="0.0000 0.0000 3.2725"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2729 -0.0731 0.0000" rpy="0.0000 0.0000 3.4034"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2610 -0.1081 0.0000" rpy="0.0000 0.0000 3.5343"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2447 -0.1412 0.0000" rpy="0.0000 0.0000 3.6652"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2241 -0.1720 0.0000" rpy="0.0000 0.0000 3.7961"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1998 -0.1998 0.0000" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1720 -0.2241 0.0000" rpy="0.0000 0.0000 4.0579"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1413 -0.2447 0.0000" rpy="0.0000 0.0000 4.1888"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1081 -0.2610 0.0000" rpy="0.0000 0.0000 4.3197"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0731 -0.2729 0.0000" rpy="0.0000 0.0000 4.4506"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0369 -0.2801 0.0000" rpy="0.0000 0.0000 4.5815"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2825 0.0000" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0369 -0.2801 0.0000" rpy="0.0000 0.0000 4.8433"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0731 -0.2729 0.0000" rpy="0.0000 0.0000 4.9742"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1081 -0.2610 0.0000" rpy="0.0000 0.0000 5.1051"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1413 -0.2447 0.0000" rpy="0.0000 0.0000 5.2360"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1720 -0.2241 0.0000" rpy="0.0000 0.0000 5.3669"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.1998 -0.1998 0.0000" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2241 -0.1720 0.0000" rpy="0.0000 0.0000 5.6287"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2447 -0.1413 0.0000" rpy="0.0000 0.0000 5.7596"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2610 -0.1081 0.0000" rpy="0.0000 0.0000 5.8905"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2729 -0.0731 0.0000" rpy="0.0000 0.0000 6.0214"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2801 -0.0369 0.0000" rpy="0.0000 0.0000 6.1523"/><geometry><box size="0.0350 0.0392 0.0500"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.2525 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2476 0.0493 0.0000" rpy="0.0000 0.0000 0.1963"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2333 0.0966 0.0000" rpy="0.0000 0.0000 0.3927"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2099 0.1403 0.0000" rpy="0.0000 0.0000 0.5890"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1785 0.1785 0.0000" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1403 0.2099 0.0000" rpy="0.0000 0.0000 0.9817"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0966 0.2333 0.0000" rpy="0.0000 0.0000 1.1781"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0493 0.2476 0.0000" rpy="0.0000 0.0000 1.3744"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2525 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0493 0.2476 0.0000" rpy="0.0000 0.0000 1.7671"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0966 0.2333 0.0000" rpy="0.0000 0.0000 1.9635"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1403 0.2099 0.0000" rpy="0.0000 0.0000 2.1598"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1785 0.1785 0.0000" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2099 0.1403 0.0000" rpy="0.0000 0.0000 2.5525"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2333 0.0966 0.0000" rpy="0.0000 0.0000 2.7489"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2476 0.0493 0.0000" rpy="0.0000 0.0000 2.9452"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2525 0.0000 0.0000" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2476 -0.0493 0.0000" rpy="0.0000 0.0000 3.3379"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2333 -0.0966 0.0000" rpy="0.0000 0.0000 3.5343"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2099 -0.1403 0.0000" rpy="0.0000 0.0000 3.7306"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1785 -0.1785 0.0000" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1403 -0.2099 0.0000" rpy="0.0000 0.0000 4.1233"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0966 -0.2333 0.0000" rpy="0.0000 0.0000 4.3197"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0493 -0.2476 0.0000" rpy="0.0000 0.0000 4.5160"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2525 0.0000" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0493 -0.2476 0.0000" rpy="0.0000 0.0000 4.9087"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0966 -0.2333 0.0000" rpy="0.0000 0.0000 5.1051"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1403 -0.2099 0.0000" rpy="0.0000 0.0000 5.3014"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1785 -0.1785 0.0000" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2099 -0.1403 0.0000" rpy="0.0000 0.0000 5.6941"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2333 -0.0966 0.0000" rpy="0.0000 0.0000 5.8905"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2476 -0.0493 0.0000" rpy="0.0000 0.0000 6.0868"/><geometry><box size="0.0200 0.0525 0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.5000 0.0060 0.0060"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0450" length="0.0750"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2400 0.0000 0.0450" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2318 0.0621 0.0450" rpy="0.0000 0.0000 0.2618"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2078 0.1200 0.0450" rpy="0.0000 0.0000 0.5236"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1697 0.1697 0.0450" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1200 0.2078 0.0450" rpy="0.0000 0.0000 1.0472"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0621 0.2318 0.0450" rpy="0.0000 0.0000 1.3090"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.2400 0.0450" rpy="0.0000 0.0000 1.5708"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0621 0.2318 0.0450" rpy="0.0000 0.0000 1.8326"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1200 0.2078 0.0450" rpy="0.0000 0.0000 2.0944"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1697 0.1697 0.0450" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2078 0.1200 0.0450" rpy="0.0000 0.0000 2.6180"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2318 0.0621 0.0450" rpy="0.0000 0.0000 2.8798"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2400 0.0000 0.0450" rpy="0.0000 0.0000 3.1416"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2318 -0.0621 0.0450" rpy="0.0000 0.0000 3.4034"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.2078 -0.1200 0.0450" rpy="0.0000 0.0000 3.6652"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1697 -0.1697 0.0450" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1200 -0.2078 0.0450" rpy="0.0000 0.0000 4.1888"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0621 -0.2318 0.0450" rpy="0.0000 0.0000 4.4506"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0000 -0.2400 0.0450" rpy="0.0000 0.0000 4.7124"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.0621 -0.2318 0.0450" rpy="0.0000 0.0000 4.9742"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1200 -0.2078 0.0450" rpy="0.0000 0.0000 5.2360"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1697 -0.1697 0.0450" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2078 -0.1200 0.0450" rpy="0.0000 0.0000 5.7596"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2318 -0.0621 0.0450" rpy="0.0000 0.0000 6.0214"/><geometry><box size="0.0120 0.0689 0.0120"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1739 0.1739 0.0225" rpy="0.0000 0.0000 0.7854"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1739 0.1739 0.0225" rpy="0.0000 0.0000 2.3562"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="-0.1739 -0.1739 0.0225" rpy="0.0000 0.0000 3.9270"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.1739 -0.1739 0.0225" rpy="0.0000 0.0000 5.4978"/><geometry><box size="0.0120 0.0120 0.0450"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <visual><origin xyz="0.2000 0.0000 0.0260" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0300 0.0120"/></geometry><material name="accent"><color rgba="0.9500 0.4500 0.1000 1.0000"/></material></visual>
+    <collision><geometry><cylinder radius="0.30" length="0.05"/></geometry></collision>
+    <inertial><mass value="2.5"/><inertia ixx="0.06" ixy="0" ixz="0" iyy="0.06" iyz="0" izz="0.06"/></inertial>
+  </link>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="right_wheel"/>
+    <origin xyz="-0.35 -0.325 0" rpy="1.5708 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <link name="caster_steer_left">
+    <inertial><mass value="0.01"/><inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/></inertial>
+    <visual><origin xyz="0.0000 0.0000 0.0200" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0260" length="0.0500"/></geometry><material name="motor"><color rgba="0.3500 0.3700 0.4000 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.1200" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0120" length="0.2400"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0250 0.0000 -0.0120" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0900 0.0750 0.0120"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0500 0.0260 -0.0650" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0080 0.1200"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0500 -0.0260 -0.0650" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0080 0.1200"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+  </link>
+  <joint name="caster_swivel_left_joint" type="continuous">
+    <parent link="seat"/><child link="caster_steer_left"/>
+    <origin xyz="0.40 0.325 -0.28" rpy="0 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="1.5" friction="0.5"/>
+  </joint>
+
+  <link name="front_caster_left">
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.1100" length="0.0320"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0500" length="0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <collision><geometry><sphere radius="0.11"/></geometry></collision>
+    <inertial><mass value="0.7"/><inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.002"/></inertial>
+  </link>
+  <joint name="front_caster_left_joint" type="continuous">
+    <parent link="caster_steer_left"/><child link="front_caster_left"/>
+    <origin xyz="-0.05 0 -0.11" rpy="1.5708 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <link name="caster_steer_right">
+    <inertial><mass value="0.01"/><inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/></inertial>
+    <visual><origin xyz="0.0000 0.0000 0.0200" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0260" length="0.0500"/></geometry><material name="motor"><color rgba="0.3500 0.3700 0.4000 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.1200" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0120" length="0.2400"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0250 0.0000 -0.0120" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0900 0.0750 0.0120"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0500 0.0260 -0.0650" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0080 0.1200"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+    <visual><origin xyz="-0.0500 -0.0260 -0.0650" rpy="0.0000 0.0000 0.0000"/><geometry><box size="0.0300 0.0080 0.1200"/></geometry><material name="frame"><color rgba="0.7000 0.7200 0.7600 1.0000"/></material></visual>
+  </link>
+  <joint name="caster_swivel_right_joint" type="continuous">
+    <parent link="seat"/><child link="caster_steer_right"/>
+    <origin xyz="0.40 -0.325 -0.28" rpy="0 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="1.5" friction="0.5"/>
+  </joint>
+
+  <link name="front_caster_right">
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.1100" length="0.0320"/></geometry><material name="rubber"><color rgba="0.0500 0.0500 0.0500 1.0000"/></material></visual>
+    <visual><origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000"/><geometry><cylinder radius="0.0500" length="0.0400"/></geometry><material name="silver"><color rgba="0.8200 0.8400 0.8800 1.0000"/></material></visual>
+    <collision><geometry><sphere radius="0.11"/></geometry></collision>
+    <inertial><mass value="0.7"/><inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.002"/></inertial>
+  </link>
+  <joint name="front_caster_right_joint" type="continuous">
+    <parent link="caster_steer_right"/><child link="front_caster_right"/>
+    <origin xyz="-0.05 0 -0.11" rpy="1.5708 0 0"/><axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+</robot>

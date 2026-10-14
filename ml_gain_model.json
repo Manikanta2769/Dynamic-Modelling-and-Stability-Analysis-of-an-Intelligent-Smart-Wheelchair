@@ -1,0 +1,47 @@
+{
+  "model_version": 5,
+  "estimator": "RandomForestRegressor",
+  "feature_names": [
+    "abs_speed_error",
+    "grade_deg",
+    "cross_slope_deg",
+    "abs_roll_deg",
+    "abs_pitch_deg",
+    "lateral_speed",
+    "abs_accel",
+    "controller_pid",
+    "controller_nonlinear_pid",
+    "controller_smc",
+    "controller_fuzzy"
+  ],
+  "gain_names": [
+    "pid_kp_scale",
+    "pid_ki_scale",
+    "pid_kd_scale",
+    "smc_lambda_scale",
+    "smc_k_scale",
+    "smc_phi_scale",
+    "fuzzy_output_scale"
+  ],
+  "controller_names": [
+    "pid",
+    "nonlinear_pid",
+    "smc",
+    "fuzzy"
+  ],
+  "training_contexts": [
+    "flat_smooth",
+    "flat_rough",
+    "uphill_rough",
+    "downhill_rough",
+    "cross_slope_left",
+    "cross_slope_right",
+    "uphill_sudden",
+    "downhill_sudden",
+    "combined_repeated"
+  ],
+  "training_labels": "per-controller random-search best gains; state samples from optimized simulated rollouts",
+  "simulation_time_step_s": 0.01,
+  "simulation_duration_s": 8.0,
+  "random_seed": 42
+}
